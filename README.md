@@ -1,6 +1,6 @@
 # Hugo's Anathema
 
-*Hugo's Anathema* is an anti-theme, it is a bare bones [Hugo](https://gohugo.io/) starter template to get you rolling on your own themes a bit quicker.
+<img align="right" src="https://github.com/calligraffiti/hugos-anathema/blob/master/static/img/hugos-thumb.jpg">*Hugo's Anathema* is an anti-theme, it is a bare bones [Hugo](https://gohugo.io/) starter template to get you rolling on your own themes a bit quicker.
 
 Styles are written in SASS, scss format. The files are organized in a very opinionated style. Feel free to throw out and reorganize.
 
