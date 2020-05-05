@@ -1,0 +1,212 @@
+.navigation {
+  height: 6rem;
+  padding-right: 2rem;
+  display: flex;
+  border-top: 1px solid $color-white;
+  border-bottom: 1px solid $color-white;
+  background-color: $color-secondary;
+  opacity: .86;
+  z-index: 6000;
+  display: flex;
+
+  &__checkbox {
+    display: none;
+  }
+
+  &__button {
+    width: 5rem;
+    height: 5rem;
+    display: none;
+    cursor: pointer;
+    z-index: 2000;
+    background-color: transparent;
+    border-radius: 50%;
+    margin-top: .4rem;
+  }
+
+  &__background {
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    top: -6rem;
+    right: -6rem;
+    background-color: $color-secondary;
+    z-index: 1000;
+    transition: transform .5s cubic-bezier(.05,.48,.49,1.01);
+  }
+
+  &__logo {
+    img {
+      height: 60px;
+
+      @include respond(tab-land) {
+        height: 52px;
+      }
+      @include respond(tab-port) {
+        height: 46px;
+      }
+      @include respond(phone) {
+        height: 40px;
+      }
+
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-left: auto;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      font-family: 'Montserrat', 'helvetica', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 300;
+      list-style: none;
+      padding: 1.2rem 2rem;
+      color: $color-white;
+      text-decoration: none;
+      transition: transform .2s cubic-bezier(.61,-0.84,.54,.91);
+    }
+
+    &:hover,
+    &:active {
+      transform: scale(1.2);
+    }
+  }
+
+  &__item {
+    display: flex;
+    &:not(:last-child) {
+      margin-right: .4rem;
+    }
+  }
+
+  &__skip {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+  }
+
+  &__link--toggle {
+    // display: none;
+  }
+
+  // ICON
+  &__icon { // create the white line
+    text-align: center;
+    position: relative;
+    margin-top: 2.4rem;
+    margin-left: 1rem;
+
+    &,
+    &::before, // create 2 more with the before & after psydo elements
+    &::after {
+      width: 3rem;
+      height: 2px;
+      background-color: $color-white;
+      display: inline-block;
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      transition: all .2s;
+    }
+
+    // position other two, one for each
+    &::before { top: -.8rem; }
+    &::after { top: .8rem; }
+  }
+
+  &__button:hover &__icon::before { // for hover effect makes bars move away from center line
+    top: -1rem;
+  }
+
+  &__button:hover &__icon::after {
+    top: 1rem;
+  }
+
+  &__checkbox:checked + &__button &__icon { // for the X make center line disappear
+    background-color: transparent;
+  }
+
+  &__checkbox:checked + &__button &__icon::before { // rotate top line
+    top: 0;
+    transform: rotate(135deg);
+  }
+
+  &__checkbox:checked + &__button &__icon::after { // rotate bottom line
+    top: 0;
+    transform: rotate(-135deg);
+  }
+
+  @include respond(tab-port) {
+    .navigation__list,
+    .navigation {
+      flex-direction: column;
+    }
+
+    .navigation {
+      &__list {
+        position: fixed;
+        height: 100vh;
+        top: 65%;
+        left: 0;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        z-index: 1500;
+        opacity: 0;
+        // display: none;
+        transition: all .3s cubic-bezier(.61,-0.84,.54,.91);
+
+      }
+
+      &__button {
+        display: flex;
+      }
+
+      &__link {
+        margin-left: auto;
+        &:link,
+        &:visited {
+          font-size: 4rem;
+        }
+      }
+
+    }
+    &__checkbox:checked ~ &__background {
+      transform: scale(72);
+    }
+
+    &__checkbox:checked ~ &__list {
+      display: flex;
+      top: 65%;
+      left: 50%;
+      opacity: 1;
+    }
+
+  }
+
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  background-color: $color-grey-dark;
+  transition: all 3.6s;
+}
+
+.sticky + .navigation {
+  padding: 1rem;
+}
+
+

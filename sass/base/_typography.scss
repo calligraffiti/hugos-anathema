@@ -1,0 +1,111 @@
+body {
+  font-family: 'Montserrat', 'helvetica', sans-serif;
+  line-height: 1.7;
+  color: $color-grey;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  p {
+    a {
+      font-size: $default-font-size;
+      color: $color-secondary-link;
+      text-decoration: none;
+      transition: all .6s;
+      &:hover {
+        color: $color-secondary;
+      }
+    }
+
+  }
+}
+
+.heading-primary {
+  color: $color-white;
+  backface-visibility: hidden;
+  margin-bottom: 6rem;
+
+  &--main {
+    display: block;
+    font-family: 'Mainsail', 'helvetica', sans-serif;
+    font-size: 3.4rem;
+    font-weight: normal;
+    line-height: 3rem;
+    animation: moveInLeft 1s ease-out;
+
+    // @include respond(phone-land) {
+    //   font-size: 2.5rem;
+    // }
+
+  }
+
+  &--sub {
+    display: block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    font-weight: 100;
+    margin-left: 0.6rem;
+    // letter-spacing: .10rem;
+    animation: moveInRight 1s ease-out;
+  }
+}
+
+.heading-secondary {
+  font-family: 'Montserrat', 'helvetica', sans-serif;
+  font-size: 7.2rem;
+  font-weight: 100;
+  line-height: 8.6rem;
+  margin-bottom: 2rem;
+  color: $color-secondary;
+  background-image: linear-gradient(to right bottom, $color-secondary-med, $color-secondary);
+  -webkit-background-clip: text;
+  color: transparent;
+
+  @include respond(tab-port) {
+    font-size: 7.5rem;
+  }
+
+  @include respond(phone) {
+    font-size: 6rem;
+    line-height: 8rem;
+    margin-bottom: 4rem;
+  }
+
+}
+
+.font-color-white {
+  color: $color-white;
+}
+
+.paragraph {
+  font-size: $default-font-size;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.list {
+  padding-bottom: 3rem;
+  margin-left: 4rem;
+
+  ul {
+    list-style-type: none;
+    li {
+      margin-left: 2.5rem;
+      list-style-type: square;
+    }
+    li li {
+      list-style-type: none;
+      &::before {content: "⦿ "; color: $color-secondary; display: inline-block; width: 3rem; margin-left: -2rem }
+    }
+    ul {
+      li li {
+        margin-left: 3.25rem;
+        list-style-type: circle;
+        &::before {content: "";}
+      }
+    }
+
+  }
+
+}

@@ -1,0 +1,19 @@
+      <div class="navigation" id="navbar">
+
+        <div class="navigation__skip"><a href="#content">Skip to Main Content</a></div>
+
+        <div class="navigation__logo"><a href="/"><img srcset="/img/logo-white-1x.png 1x, /img/logo-white-x2.png 2x" alt="Small Jin logo" src="/img/logo-white-1x.png"></a></div>
+        <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="navigation__button navigation__link">
+          <span class="navigation__icon">&nbsp;</span>
+        </label>
+
+        {{ $currentPage := . }}
+        <div class="navigation__background">&nbsp;</div>
+        <nav class="navigation__list">
+          {{ range .Site.Menus.main }}
+          <div class="navigation__item"><a href="{{ .URL }}" class="navigation__link" onclick="unCheckAll()">{{ .Name }}</a></div>
+          {{ end }}
+        </nav>
+      </div>
+

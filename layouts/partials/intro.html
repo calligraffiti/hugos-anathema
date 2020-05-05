@@ -1,0 +1,17 @@
+      {{ $intro := .Site.Data.intro }}
+      <section class="section-intro" id="section-intro">
+
+        <div class="row u-margin-bottom-small">
+          <h2 class="heading-secondary">
+            {{ $intro.title }}
+          </h2>
+
+          <figure class="intro__shape">
+            <img class="intro__img" src="img/{{ $intro.content.img }}.jpg ">
+          </figure>
+
+          {{ $intro.content.text | markdownify }}
+
+        </div>
+
+      </section>

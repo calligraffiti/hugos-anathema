@@ -1,0 +1,76 @@
+*,
+*::after,               // also after & before psudo elements
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;  // this is the prefered way to set box-sizing… (see body)
+}
+
+html {
+    // This defines what 1rem is
+  font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
+  scroll-behavior: smooth;
+
+  @include respond(tab-land) { // width < 1200px?
+    font-size: 56.25%; // 1rem = 9px, 9/16 = 50%
+  }
+
+  @include respond(tab-port) { // width < 900px?
+    font-size: 50%; // 1rem = 8px, 8/16 = 50%
+  }
+
+  @include respond(phone) { // width < 600px
+    font-size: 44%; // 1rem = 7px, 7/16 = 50%
+  }
+
+  @include respond(desktop-lg) {
+    font-size: 75%; // 1rem = 12, 12/16
+  }
+}
+
+body {
+  box-sizing: border-box; // … w/ box-sizing set to border-box in the body
+  // padding: 1rem; // disabled because of issue with sticky nav
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+}
+
+main {
+}
+
+h4, h5 {
+  font-family: "Mainsail", serif;
+  font-size: 3rem;
+  font-weight: normal;
+  color: $color-secondary;
+}
+
+h4 {
+  font-size: 3.6rem;
+  margin-bottom: -1rem;
+}
+
+hr.gradiated {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right,
+    rgba($color-secondary-med, 0),
+    rgba($color-secondary-med, 0.75),
+    rgba($color-secondary-med, 0));
+}
+
+::selection {
+  background-color: $color-secondary-light;
+  color: $color-white;
+}
+
+cite {
+  font-style: normal;
+  font-size: 2rem;
+}

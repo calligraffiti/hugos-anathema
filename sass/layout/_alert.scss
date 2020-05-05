@@ -1,0 +1,15 @@
+// for single stripped down pages. e.g. thank-you and error pp. etc.
+.alert-box {
+  padding: 20rem;
+
+  @include respond(tab-land) {
+    padding: 10rem;
+    margin-top: 10rem;
+  }
+
+  @include respond(phone) {
+    padding: 2rem;
+    margin-top: 2rem;
+  }
+
+}

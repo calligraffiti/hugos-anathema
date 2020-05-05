@@ -1,0 +1,29 @@
+  <div class="story__media">
+    <img class="story__img" src="/img/{{ .Get "file" }}.jpg" alt="">
+  </div>
+  <h4 class="story__heading"><a href="#{{ .Get "file" }}" class="btn-text">{{ .Params.Title }}</a></h4>
+
+  <div id="{{ .Get "file" }}" class="modalDialog modalDialog__horiz">
+    <div>
+      <a href="#close" title="Close" class="close">&#x2716;</a>
+      <video width="720" controls
+          poster="/video/{{ .Get "file" }}.jpg" >
+        <source
+          src="/video/{{ .Get "file" }}.mp4"
+          type="video/mp4">
+        <source
+          src="/video/{{ .Get "file" }}.ogv"
+          type="video/ogg">
+        <source
+          src="/video/{{ .Get "file" }}.webm"
+          type="video/webm">
+        Your browser doesn't support HTML5 video tag.
+      </video>
+        <p class="paragraph font-color-white">{{ .Get "description" }}</p>
+    </div>
+  </div>
+
+  <p class="story__text u-margin-bottom-medium">
+    {{ .Get "description" | truncate 170 }}
+  </p>
+  <p>&nbsp;</p>
