@@ -2,7 +2,7 @@
 
 <img align="right" src="https://github.com/calligraffiti/hugos-anathema/blob/master/static/img/hugos-thumb.jpg">*Hugo's Anathema* is an anti-theme, it is a bare bones [Hugo](https://gohugo.io/) starter template to get you rolling on your own themes a bit quicker.
 
-Styles are written in SASS, scss format. The files are organized in a very opinionated style. Feel free to throw out and reorganize.
+Styles are written in SASS, scss format. The files are organized in module/component style. Feel free to throw out and reorganize.
 
 ## Requirements
 This app requires [Node.js](https://nodejs.org/en/download/) packages to compile the source code and generate files. This repository automatically pushes changes to the live site. Please edit locally or on a branch to confirm your changes build properly before pushing your changes to the Master branch.
