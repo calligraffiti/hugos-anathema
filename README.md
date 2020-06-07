@@ -30,7 +30,7 @@ Then navigate to `localhost:1313` in your browser to view a live local server wi
 For more information visit the [Hugo Documentation](https://gohugo.io/getting-started/) for more information.
 
 ### CSS
-Styles are written in SCSS. Run `npm run-script watch` to to preview your changes and, `npm run-script build` to compile.
+Styles are written in SCSS. Run `npm run-script watch:sass` to to preview your changes and, `npm run-script build` to compile, concatenate and minimize all your styles into one style sheet.
 
 ## Directory Structure
 ```
