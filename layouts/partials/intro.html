@@ -6,8 +6,18 @@
             {{ $intro.title }}
           </h2>
 
+          <noscript><figure class="intro__shape">
+              <img
+              src="img/{{ $intro.content.img }}-1x.jpg"
+              alt="{{ $intro.content.alt }}" class="intro__img">
+            </figure>
+          </noscript>
           <figure class="intro__shape">
-            <img class="intro__img" src="img/{{ $intro.content.img }}.jpg ">
+            <img data-sizes="auto"
+            src="img/{{ $intro.content.img }}-lqpi.jpg"
+            data-srcset="img/{{ $intro.content.img }}-1x.jpg 1x, img/{{ $intro.content.img }}-2x.jpg 2x"
+            alt="{{ $intro.content.alt }}"
+            class="intro__img lazyload blur-up no-js-hidden">
           </figure>
 
           {{ $intro.content.text | markdownify }}

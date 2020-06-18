@@ -6,11 +6,15 @@ body {
   -moz-font-smoothing: antialiased;
   -o-font-smoothing: antialiased;
   p {
+    font-size: $default-font-size;
+
+    &:not(:last-child) {
+      margin-bottom: 3rem;
+    }
     a {
       font-size: $default-font-size;
       color: $color-secondary-link;
       text-decoration: none;
-      transition: all .6s;
       &:hover {
         color: $color-secondary;
       }
@@ -69,14 +73,6 @@ body {
 
 .font-color-white {
   color: $color-white;
-}
-
-.paragraph {
-  font-size: $default-font-size;
-
-  &:not(:last-child) {
-    margin-bottom: 3rem;
-  }
 }
 
 .list {

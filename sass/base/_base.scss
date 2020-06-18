@@ -35,7 +35,6 @@ body {
   flex-direction: column;
   padding: 16px;
 
-
   @include respond(tab-port) {
     padding: 0;
   }
