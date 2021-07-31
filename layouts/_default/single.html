@@ -1,0 +1,16 @@
+    {{ define "main" }}
+
+    <main id="content">
+
+      <section class="section-about">
+        <div class="row bio-page u-margin-bottom-small">
+          <h2 class="heading-secondary">{{ .Title }}</h2>
+
+          {{ .Content | replaceRE "<p>" "<p class=\"paragraph\">" | safeHTML }}
+
+        </div>
+      </section>
+
+    </main>
+
+    {{ end }}

@@ -1,0 +1,30 @@
+    {{ define "main" }}
+
+    <main>
+
+      <section class="section-about">
+        <div class="row u-margin-bottom-small">
+
+          <h2 class="heading-secondary">
+            {{ .Title }}
+          </h2>
+
+          <span class="text-big"> {{.Content}} </span>
+
+          <p>&nbsp;</p>
+
+          <ul>
+            {{ range .Pages.ByDate }}
+              <li>
+                <h3 class="heading-tertiary"><a href="{{ .Permalink }}">Read full bio</a></h3>
+                <time>{{ .Date.Format "Mon, Jan 2, 2006" }}</time>
+              </li>
+            {{ end }}
+          </ul>
+
+        </div>
+      </section>
+
+    </main>
+
+    {{ end }}
