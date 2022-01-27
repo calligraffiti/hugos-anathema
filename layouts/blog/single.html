@@ -1,0 +1,16 @@
+    {{ define "main" }}
+
+    <main>
+
+      <section class="article-intro">
+        <div class="row bio-page u-margin-bottom-small">
+          <h2 id="content" class="heading-secondary" tabindex="-1">{{ .Title }}</h2>
+
+		  	  {{ .Content | safeHTML }}
+
+        </div>
+      </section>
+
+    </main>
+
+    {{ end }}

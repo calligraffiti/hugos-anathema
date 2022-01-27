@@ -1,0 +1,32 @@
+{{ define "main" }}
+
+<main id="content">
+
+  <section class="article-intro">
+    <div class="row u-margin-bottom-small">
+
+      <h2 id="content" class="heading-secondary" tabindex="-1">
+        {{ .Title }}
+      </h2>
+
+      <span class="text-big"> {{.Content}} </span>
+
+      <p>&nbsp;</p>
+
+      <ul>
+        {{ range .Pages.ByDate }}
+          <div class="story__heading">
+            <h4>
+              <a href="{{ .Permalink }}" class="btn-text">{{ .Title }}</a>
+            </h4>
+            <br>
+          </div>
+        {{ end }}
+      </ul>
+
+    </div>
+  </section>
+
+</main>
+
+{{ end }}

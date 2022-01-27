@@ -23,6 +23,13 @@ copyright = "Victor Hugo"
     name = "about"
     title = "About Us"
     url = "/#section-about"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "blog"
+    name = "blog"
+    title = "Blog"
+    url = "/blog/"
     weight = 3
 
   [[menu.main]]
@@ -30,7 +37,7 @@ copyright = "Victor Hugo"
     name = "contact"
     title = "Contact Us"
     url = "/#section-contact"
-    weight = 6
+    weight = 4
 
 # Footer Menu:
 
@@ -40,6 +47,13 @@ copyright = "Victor Hugo"
     title = "About Us"
     url = "/#section-about"
     weight = 1
+
+  [[menu.footer]]
+    identifier = "blog"
+    name = "blog"
+    title = "Blog"
+    url = "/blog/"
+    weight = 3
 
   [[menu.footer]]
     identifier = "contact"
