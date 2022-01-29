@@ -12,7 +12,7 @@
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__list" aria-label="primary">
           {{ range .Site.Menus.main }}
-          <div class="navigation__item"><a href="{{ .URL }}" class="navigation__link" onclick="unCheckAll()">{{ .Name }}</a></div>
+          <div class="navigation__item"><a href="{{ .URL }}" class="navigation__link" onclick="unCheckAll()">{{ .Title }}</a></div>
           {{ end }}
         </nav>
       </div>
