@@ -12,7 +12,7 @@
       <span class="text-big"> {{.Content}} </span>
 
       <ul>
-        {{ range .Pages.ByDate }}
+        {{ range (.Pages.ByDate).Reverse }}
           <div class="story__heading">
             <h4>
               <a href="{{ .Permalink }}" class="btn-text">{{ .Title }}</a>
