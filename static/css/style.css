@@ -416,6 +416,7 @@ body {
         transform: scale(1); }
   .footer__copyright {
     color: rgba(228, 228, 228, 0.4);
+    font-size: 1.4rem;
     text-align: center;
     padding-top: 0.8rem; }
 
