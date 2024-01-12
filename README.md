@@ -23,7 +23,7 @@ Install provided packages or substitute your own:
 A static site generator, [Hugo](https://gohugo.io), is used to quickly edit and generate content.
 
 To start a local server run this command:<br>
-`hugo server`
+`npm start`
 
 Then navigate to `localhost:1313` in your browser to view a live local server with the running app.
 
