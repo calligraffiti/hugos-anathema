@@ -45,6 +45,23 @@ body {
     body {
       padding: 0; } }
 
+main ul, main ol {
+  list-style-position: inside;
+  margin: -2rem 0 2rem 1rem; }
+
+main li {
+  font-size: 2.4rem; }
+  main li a {
+    font-size: 2.4rem;
+    color: #006b83;
+    text-decoration: none;
+    transition: all .6s; }
+    main li a:hover {
+      color: #009DC1; }
+    main li a:focus-visible {
+      outline: 2px solid #0A4068;
+      color: #0A4068; }
+
 h4, h5 {
   font-family: "Mainsail", serif;
   font-size: 3rem;
@@ -54,6 +71,23 @@ h4, h5 {
 h4 {
   font-size: 3.6rem;
   margin-bottom: -1rem; }
+
+ul {
+  list-style-position: inside; }
+
+li {
+  list-style-type: circle;
+  font-size: 2.4rem; }
+  li a {
+    font-size: 2.4rem;
+    color: #006b83;
+    text-decoration: none;
+    transition: all .6s; }
+    li a:hover {
+      color: #009DC1; }
+    li a:focus-visible {
+      outline: 2px solid #0A4068;
+      color: #0A4068; }
 
 hr.gradiated {
   border: 0;
