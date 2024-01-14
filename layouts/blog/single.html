@@ -5,10 +5,43 @@
       <section class="article-intro">
         <div class="row bio-page u-margin-bottom-small">
           <h2 id="content" class="heading-secondary" tabindex="-1">{{ .Title }}</h2>
-
-		  	  {{ .Content | safeHTML }}
-
         </div>
+      </section>
+
+      <section class="row">
+
+		  	{{ .Content | safeHTML }}
+
+        <!-- Prev / Next Post -->
+        <div class="row u-margin-bottom-small">
+          <nav class="story__navigation">
+            <div class="clearfix">
+            {{ if ne .PrevInSection  nil }}
+            <div class="story__navigation--left">
+              <!-- <i class="ui-arrow-left"></i> -->
+              <span class="story__navigation--label">Previous ❬</span>
+              <div>
+              {{ with .PrevInSection }}
+              <a href="{{.Permalink}}" class="story__navigation--link" rel="next">{{ .Title }}</a>
+              {{ end }}
+              </div>
+            </div>
+            {{ end }}
+            {{ if ne .NextInSection  nil }}
+            <div class="story__navigation--right">
+              <span class="story__navigation--label">❭ Next</span>
+              <!-- <i class="ui-arrow-right"></i> -->
+              <div>
+              {{ with .NextInSection }}
+              <a href="{{ .Permalink }}" class="story__navigation--link" rel="prev">{{ .Title }}</a>
+              {{ end }}
+              </div>
+            </div>
+            {{ end }}
+            </div>
+          </nav>
+        </div>
+
       </section>
 
     </main>

@@ -344,6 +344,35 @@ body {
 .sticky + .navigation {
   padding: 1rem; }
 
+@media (max-width: 56.25em) {
+  .story {
+    padding: 0;
+    margin: 0; } }
+
+.story__navigation {
+  display: block; }
+  .story__navigation--label {
+    font-size: 1.8rem; }
+  .story__navigation--link {
+    font-family: "Mainsail", serif;
+    font-size: 3rem;
+    font-weight: normal;
+    transition: all .4s; }
+    .story__navigation--link:link, .story__navigation--link:visited {
+      text-decoration: none;
+      color: #009DC1; }
+    .story__navigation--link:hover, .story__navigation--link:active {
+      text-decoration: none;
+      color: #0A4068;
+      transform: scale(1.2); }
+  .story__navigation--left {
+    display: inline-block;
+    float: left; }
+  .story__navigation--right {
+    display: inline-block;
+    text-align: right;
+    float: right; }
+
 .alert-box {
   padding: 20rem; }
   @media (max-width: 75em) {

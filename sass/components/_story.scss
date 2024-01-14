@@ -1,0 +1,47 @@
+.story {
+
+  @include respond(tab-port) {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__navigation {
+    display: block;
+
+    &--label {
+      font-size: 1.8rem;
+    }
+
+    &--link {
+      font-family: "Mainsail", serif;
+      font-size: 3rem;
+      font-weight: normal;
+      transition: all .4s;
+      &:link,
+      &:visited {
+        text-decoration: none;
+        color: $color-secondary-med;
+      }
+
+      &:hover,
+      &:active {
+        text-decoration: none;
+        color: $color-secondary;
+        transform: scale(1.2);
+      }
+    }
+
+    &--left {
+      display: inline-block;
+      float: left;
+    }
+
+    &--right {
+      display: inline-block;
+      text-align: right;
+      float: right;
+    }
+
+  }
+
+}
