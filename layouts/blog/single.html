@@ -5,6 +5,7 @@
       <section class="article-intro">
         <div class="row bio-page u-margin-bottom-small">
           <h2 id="content" class="heading-secondary" tabindex="-1">{{ .Title }}</h2>
+          <cite>by {{ $.Param "author" }} &mdash; {{ .Date.Format "Jan 2, 2006" }}</cite>
         </div>
       </section>
 

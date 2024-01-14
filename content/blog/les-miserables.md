@@ -1,6 +1,7 @@
 ---
 title: "Les Misérables"
 date: 1862-01-12T17:32:03-08:00
+author: Upton Sinclair
 draft: false
 ---
 
