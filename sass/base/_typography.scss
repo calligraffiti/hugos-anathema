@@ -23,6 +23,16 @@ body {
   }
 }
 
+a {
+  text-decoration: none;
+  &:visited {
+    color: $color-secondary-med;
+  }
+  &:hover {
+    color: $color-secondary;
+  }
+}
+
 .heading-primary {
   color: $color-white;
   backface-visibility: hidden;
