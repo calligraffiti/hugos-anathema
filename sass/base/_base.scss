@@ -1,9 +1,26 @@
-*,
-*::after,               // also after & before psudo elements
-*::before {
-  margin: 0;
-  padding: 0;
+// CSS Restets
+*, *::before, *::after {
   box-sizing: inherit;  // this is the prefered way to set box-sizing… (see body)
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__next {
+  isolation: isolate;
 }
 
 html {
@@ -66,7 +83,7 @@ main {
 }
 
 h4, h5 {
-  font-family: "Mainsail", serif;
+  font-family: "Monterrat-Light", serif;
   font-size: 3rem;
   font-weight: normal;
   color: $color-secondary;
