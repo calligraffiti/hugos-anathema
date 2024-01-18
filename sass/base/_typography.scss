@@ -1,5 +1,5 @@
 body {
-  font-family: 'Montserrat', 'helvetica', sans-serif;
+  font-family: $default-font;
   line-height: 1.7;
   color: $color-grey;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +40,7 @@ a {
 
   &--main {
     display: block;
-    font-family: 'Mainsail', 'helvetica', sans-serif;
+    font-family: $default-font;
     font-size: 3.4rem;
     font-weight: normal;
     line-height: 3rem;
@@ -59,7 +59,7 @@ a {
 }
 
 .heading-secondary {
-  font-family: 'Montserrat', 'helvetica', sans-serif;
+  font-family: ;
   font-size: 7.2rem;
   font-weight: 100;
   line-height: 8.6rem;
