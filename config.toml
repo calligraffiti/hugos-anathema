@@ -3,6 +3,11 @@ languageCode = "en-us"
 title = "Hugo's Antathema"
 copyright = "Victor Hugo"
 
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.goldmark.renderer]
+    unsafe = true
+
 [params]
   AuthorName = "Rocketroom - https://rocketroom.com"
   Subtitle = "The Anti-theme"
