@@ -8,6 +8,10 @@ Disallow: /
 User-agent: Google-Extended
 Disallow: /
 
+# Perplexity AI
+User-agent: PerplexityBot
+Disallow: /
+
 # Common Crawl
 User-agent: CCBot
 Disallow: /
